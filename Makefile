@@ -6,7 +6,7 @@
 #    By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/19 21:34:32 by mvolkman          #+#    #+#              #
-#    Updated: 2024/03/14 13:55:39 by mvolkman         ###   ########.fr        #
+#    Updated: 2024/03/14 14:28:56 by mvolkman         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,9 @@ SRCS = \
 	ft_putendl_fd.c \
 	ft_putnbr_fd.c \
 	ft_split.c \
-	get_next_line.c
+	get_next_line.c \
+	ft_printf.c \
+	ft_printf_helper.c
 
 BONUS_SRCS = \
 	ft_lstnew_bonus.c \

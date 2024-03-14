@@ -10,7 +10,7 @@
 // /*                                                                            */
 // /* ************************************************************************** */
 
-#include "../include/get_next_line.h"
+#include "../include/libft.h"
 
 char	*init_storage(char *storage)
 {

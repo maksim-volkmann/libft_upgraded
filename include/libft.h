@@ -6,7 +6,7 @@
 /*   By: mvolkman <mvolkman@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/19 21:38:25 by mvolkman          #+#    #+#             */
-/*   Updated: 2023/11/06 15:51:07 by mvolkman         ###   ########.fr       */
+/*   Updated: 2024/03/14 16:22:27 by mvolkman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,15 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <fcntl.h>
 # include <ctype.h>
 # include <unistd.h>
+# include <stdarg.h>
+// # include <stdio.h> // for printf (delete later)
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 typedef struct s_list
 {
@@ -69,5 +76,21 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// Get_next_line
+char	*init_storage(char *storage);
+char	*cleanup_and_return(char **storage, char *line);
+char	*extract_line(char **storage);
+char	*read_to_storage(int fd, char *storage);
+char	*get_next_line(int fd);
+
+// Printf
+int	ft_putint(long n);
+int	ft_putptn(void *n);
+int	ft_puthex(unsigned long long n, int c);
+int	ft_putchar(char c);
+int	ft_putstr(char *str);
+int	ft_conversions(const char *format, va_list args);
+int	ft_printf(const char *str, ...);
 
 #endif
