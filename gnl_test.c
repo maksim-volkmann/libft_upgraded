@@ -30,4 +30,6 @@ int main(void)
 		// return (0);
 
 		ft_printf("Hello, World!\n");
+
+		// gcc -Wall -Wextra -Werror -D BUFFER_SIZE=42 gnl_test.c -L. -lft -o gnl_test
 }
